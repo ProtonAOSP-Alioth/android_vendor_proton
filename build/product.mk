@@ -125,4 +125,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Overlays
 PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationOverlayHidden
