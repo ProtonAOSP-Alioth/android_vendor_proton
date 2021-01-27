@@ -127,3 +127,7 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium \
     GesturalNavigationOverlayHidden
+
+# Hotspot Client manager
+PRODUCT_PACKAGES += \
+    SoftAPManager
