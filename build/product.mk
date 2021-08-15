@@ -53,6 +53,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
+# NameSpaces
+PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
