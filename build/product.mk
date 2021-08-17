@@ -131,3 +131,28 @@ PRODUCT_PACKAGES += \
 # Hotspot Client manager
 PRODUCT_PACKAGES += \
     SoftAPManager
+
+# Override undesired Google defaults
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    keyguard.no_require_sim=true \
+    dalvik.vm.debug.alloc=0 \
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.error.receiver.system.apps=com.google.android.gms \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural \
+    ro.opa.eligible_device=true \
+    ro.setupwizard.enterprise_mode=1 \
+    persist.sys.disable_rescue=true \
+    ro.setupwizard.rotation_locked=true \
+    persist.sys.theme.accentcolor=-1
+
+# GMS-Client
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
